@@ -13,7 +13,6 @@ public class Database {
     public Soldier[] soldierInit() {
 
         for (int index = 0; index < 15; index++) {
-
             Soldier soldier = new Soldier();
             Random random = new Random();
             Rank rank = getRandomRank(random);
