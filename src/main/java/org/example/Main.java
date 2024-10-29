@@ -10,16 +10,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int quantitySoldier = getQuantitySoldiersWithCorporalRank(runRace());
-        System.out.println("Quantity Soldiers With Corporal Rank: " + quantitySoldier);
-        int finalR = quantitySoldier * 100 / 15;
-        System.out.println("Quantity Percentage With Corporal Rank: " + finalR);
-        int quantityForRace=0;
-        System.out.println("Quantity For Race: " + quantityForRace);
-        while (finalR < 60) {
-            runRace();
+        int finalR;
+        int quantityForRace = 1;
+        do {
+            int quantitySoldier = getQuantitySoldiersWithCorporalRank(runRace());
+            System.out.println("Quantity Soldiers With Corporal Rank: " + quantitySoldier);
+            finalR = quantitySoldier * 100 / 15;
+            System.out.println("Quantity Percentage With Corporal Rank: " + finalR);
+            System.out.println("Quantity For Race: " + quantityForRace);
             quantityForRace++;
         }
+        while (finalR > 60);
 
     }
 
